@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hustle & Her</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Playfair+Display:ital,wght@1,600&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:#050505;
+  color:white;
+  font-family:Montserrat,Arial,sans-serif;
+}
+.header{
+  position:sticky;
+  top:0;
+  z-index:99;
+  height:76px;
+  background:#070707;
+  border-bottom:1px solid #1b1b1b;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 24px;
+}
+.logo{
+  font-family:Bebas Neue,sans-serif;
+  font-size:34px;
+  letter-spacing:9px;
+}
+.logo span{color:#c8102e}
+.icon{font-size:30px}
+.cart{position:relative}
+.badge{
+  position:absolute;
+  top:-12px;
+  right:-12px;
+  background:#c8102e;
+  color:#fff;
+  font-size:13px;
+  border-radius:50%;
+  padding:4px 8px;
+}
+.hero{
+  min-height:720px;
+  padding:135px 48px 55px;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.15),#070707 72%),
+    linear-gradient(180deg,rgba(0,0,0,.1),#090909 95%),
+    url("hero.jpg") left center/cover no-repeat;
+}
+.label{
+  color:#c7a061;
+  letter-spacing:12px;
+  font-size:15px;
+  text-transform:uppercase;
+  margin-bottom:45px;
+}
+.label:before{
+  content:"";
+  display:inline-block;
+  width:62px;
+  height:1px;
+  background:#c7a061;
+  vertical-align:middle;
+  margin-right:16px;
+}
+h1,h2{
+  font-family:Anton,sans-serif;
+  text-transform:uppercase;
+  line-height:.95;
+  font-weight:400;
+}
+h1{font-size:72px}
+h2{font-size:58px}
+.red{color:#c8102e}
+.script{
+  font-family:"Playfair Display",serif;
+  font-style:italic;
+  color:#f3a9bd;
+  text-transform:none;
+}
+.hero p,.section p{
+  color:#b8b8b8;
+  font-size:27px;
+  line-height:1.65;
+  margin-top:45px;
+}
+.hero em{font-family:"Playfair Display";color:#f3a9bd}
+.btn{
+  display:block;
+  width:100%;
+  text-align:center;
+  text-decoration:none;
+  color:#fff;
+  padding:27px 20px;
+  margin-top:28px;
+  font-weight:800;
+  letter-spacing:10px;
+  text-transform:uppercase;
+  background:linear-gradient(90deg,#cf102e,#a90025);
+}
+.btn.outline{
+  background:transparent;
+  border:1px solid rgba(255,255,255,.35);
+}
+.rating{
+  color:#aaa;
+  letter-spacing:8px;
+  margin-top:75px;
+}
+.scroll{
+  text-align:center;
+  color:#777;
+  letter-spacing:13px;
+  margin-top:80px;
+}
+.marquee{
+  background:#101010;
+  border-top:1px solid #222;
+  border-bottom:1px solid #222;
+  overflow:hidden;
+  white-space:nowrap;
+  padding:38px 0;
+  font-family:Bebas Neue;
+  color:#cfcfcf;
+  font-size:38px;
+  letter-spacing:12px;
+}
+.star{color:#c8102e;margin-left:28px}
+.section{
+  padding:70px 48px;
+  background:#070707;
+}
+.number{
+  color:#c7a061;
+  letter-spacing:12px;
+  text-transform:uppercase;
+  margin-bottom:45px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:26px;
+  margin-top:65px;
+}
+.collection-card{
+  height:285px;
+  background-size:cover;
+  background-position:center;
+  padding:28px;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+.collection-card:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.9),rgba(0,0,0,.05));
+}
+.collection-card *{position:relative;z-index:1}
+.tag{
+  position:absolute;
+  top:30px;
+  left:28px;
+  background:rgba(0,0,0,.75);
+  border:1px solid rgba(255,255,255,.15);
+  padding:14px 18px;
+  letter-spacing:8px;
+  font-size:16px;
+}
+.collection-card h3{
+  font-family:Bebas Neue;
+  font-size:39px;
+  line-height:.95;
+}
+.pieces{
+  color:#c7c7c7;
+  letter-spacing:8px;
+  font-size:21px;
+  margin-top:12px;
+}
+.view-btn{
+  border:1px solid #8d6936;
+  color:#c7a061;
+  padding:28px;
+  text-align:center;
+  letter-spacing:9px;
+  text-decoration:none;
+  display:block;
+  margin:45px 0 65px;
+  font-weight:800;
+}
+.product img{
+  width:100%;
+  height:290px;
+  object-fit:cover;
+  margin-bottom:24px;
+}
+.product-title{
+  font-family:Bebas Neue;
+  font-size:26px;
+  line-height:1.15;
+}
+.price{
+  color:#d2a158;
+  float:right;
+  font-family:Montserrat;
+  font-weight:800;
+  font-size:29px;
+}
+.stars{
+  margin-top:18px;
+  color:#aaa;
+  letter-spacing:5px;
+}
+.hustle{
+  background:
+    radial-gradient(circle at center,#1b070b,#070707 65%);
+}
+.checks{
+  display:grid;
+  gap:27px;
+  margin-top:50px;
+}
+.check{
+  font-size:24px;
+}
+.check span{
+  background:#25060d;
+  color:#c8102e;
+  border-radius:50%;
+  padding:10px 14px;
+  margin-right:18px;
+}
+.trust{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  border-top:1px solid #222;
+}
+.trust-item{
+  display:grid;
+  grid-template-columns:80px 1fr;
+  gap:20px;
+  align-items:start;
+}
+.circle{
+  width:72px;
+  height:72px;
+  border:1px solid #222;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-size:32px;
+}
+.trust h3{
+  font-family:Bebas Neue;
+  font-size:35px;
+  line-height:1.15;
+}
+.trust p{
+  margin-top:16px;
+  font-size:22px;
+  line-height:1.25;
+}
+.email{
+  text-align:center;
+  background:linear-gradient(#080808,#14070a);
+}
+.email input{
+  width:100%;
+  padding:25px;
+  background:#080808;
+  border:1px solid #222;
+  color:white;
+  font-size:24px;
+  margin-top:35px;
+}
+.footer-note{
+  color:#777;
+  letter-spacing:10px;
+  margin-top:35px;
+  font-size:18px;
+}
+@media(max-width:500px){
+  .hero{padding:130px 34px 50px}
+  h1{font-size:62px}
+  h2{font-size:50px}
+  .hero p,.section p{font-size:24px}
+  .section{padding:64px 34px}
+  .grid{gap:22px}
+  .logo{font-size:29px;letter-spacing:7px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="icon">☰</div>
+  <div class="logo">HUSTLE <span>&</span> HER</div>
+  <div style="display:flex;gap:25px;">
+    <div class="icon">⌕</div>
+    <div class="icon cart">▢<span class="badge">2</span></div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="label">The Lifestyle Drop</div>
+  <h1>Stay Ready.<br><span class="red">Stay Paid.</span></h1>
+
+  <p>
+    Built for women who handle business. Self-defense, lifestyle gear,
+    and startup bundles for the next chapter of <em>her</em> story.
+  </p>
+
+  <a href="#" class="btn">Build My Kit</a>
+  <a href="#" class="btn outline">Start My Setup</a>
+
+  <div class="rating">★★★★★ 4.9</div>
+  <div class="scroll">SCROLL</div>
+</section>
+
+<div class="marquee">
+  STAY READY · STAY PAID <span class="star">✦</span> STAY READY · STAY PAID
+</div>
+
+<section class="section">
+  <div class="number">01 — Collections</div>
+  <h2>Shop By <span class="script">Mood</span></h2>
+  <p>From protection to expression — every category curated for the woman who runs her own.</p>
+
+  <div class="grid">
+    <div class="collection-card" style="background-image:url('self-defense.jpg')">
+      <div class="tag">STAY SAFE</div>
+      <h3>Self Defense</h3>
+      <div class="pieces">24 PIECES ↗</div>
+    </div>
+
+    <div class="collection-card" style="background-image:url('rolling-tray.jpg')">
+      <div class="tag">CUSTOM</div>
+      <h3>Rolling<br>Trays</h3>
+      <div class="pieces">18 PIECES ↗</div>
+    </div>
+
+    <div class="collection-card" style="background-image:url('hoodie.jpg')">
+      <div class="tag">NEW DROP</div>
+      <h3>Clothing</h3>
+      <div class="pieces">32 PIECES ↗</div>
+    </div>
+
+    <div class="collection-card" style="background-image:url('accessories.jpg')">
+      <div class="tag">DAILY</div>
+      <h3>Accessories</h3>
+      <div class="pieces">47 PIECES ↗</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="number">02 — Featured</div>
+  <h2>Her <span class="script">Favorites</span></h2>
+  <a href="#" class="view-btn">VIEW ALL PRODUCTS</a>
+
+  <div class="grid">
+    <div class="product">
+      <img src="self-defense.jpg">
+      <div class="product-title">Rose Gold Defense Keychain <span class="price">$38</span></div>
+      <div class="stars">★★★★★ (124)</div>
+    </div>
+
+    <div class="product">
+      <img src="rolling-tray.jpg">
+      <div class="product-title">Velvet Rose Rolling Tray <span class="price">$64</span></div>
+      <div class="stars">★★★★★ (124)</div>
+    </div>
+
+    <div class="product">
+      <img src="hoodie.jpg">
+      <div class="product-title">"Handle It" Hoodie <span class="price">$78</span></div>
+      <div class="stars">★★★★★ (124)</div>
+    </div>
+
+    <div class="product">
+      <img src="accessories.jpg">
+      <div class="product-title">Boss Hoop & Chain Set <span class="price">$52</span></div>
+      <div class="stars">★★★★★ (124)</div>
+    </div>
+  </div>
+</section>
+
+<section class="section hustle">
+  <div class="number">03 — Start Your Hustle</div>
+  <h2>From Side Hustle<br><span class="script">to her empire.</span></h2>
+
+  <p>
+    Wholesale startup bundles built for women ready to launch.
+    We give you the inventory, the playbook and the polish —
+    you bring the vision.
+  </p>
+
+  <div class="checks">
+    <div class="check"><span>✓</span> Wholesale starter inventory</div>
+    <div class="check"><span>✓</span> Brand kit & packaging templates</div>
+    <div class="check"><span>✓</span> Pricing & margin playbook</div>
+    <div class="check"><span>✓</span> Private boss community access</div>
+  </div>
+
+  <a href="#" class="btn">Start My Setup</a>
+  <a href="#" class="btn outline">View Bundles →</a>
+</section>
+
+<section class="section trust">
+  <div class="trust-item">
+    <div class="circle">🔒</div>
+    <div>
+      <h3>Secure<br>Checkout</h3>
+      <p>256-bit SSL · No data sold</p>
+    </div>
+  </div>
+
+  <div class="trust-item">
+    <div class="circle">📦</div>
+    <div>
+      <h3>Discreet<br>Shipping</h3>
+      <p>Plain packaging, always</p>
+    </div>
+  </div>
+
+  <div class="trust-item">
+    <div class="circle">🚚</div>
+    <div>
+      <h3>Fast<br>Fulfillment</h3>
+      <p>Ships within 48 hours</p>
+    </div>
+  </div>
+
+  <div class="trust-item">
+    <div class="circle">✨</div>
+    <div>
+      <h3>Boss<br>Guarantee</h3>
+      <p>Quality pieces only</p>
+    </div>
+  </div>
+</section>
+
+<section class="section email">
+  <div class="number">The List</div>
+  <h2>Get On The <span class="script">Inside</span></h2>
+  <p>Early drops, restocks, and 10% off your first order.</p>
+
+  <input type="email" placeholder="your@email.com">
+  <a href="#" class="btn">🔒 Secure My Spot</a>
+
+  <div class="footer-note">NO SPAM. UNSUBSCRIBE ANYTIME.</div>
+</section>
+
+</body>
+</html>
