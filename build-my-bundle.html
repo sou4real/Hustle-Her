@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Build My Bundle | Hustle & Her</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#050505;
+  --dark:#070707;
+  --panel:#0a0a0a;
+  --red:#c8102e;
+  --red2:#99001d;
+  --gold:#c7a061;
+  --pink:#f3a9bd;
+  --muted:#b8b8b8;
+  --line:#222;
+}
+body{background:var(--black);color:white;font-family:Arial,sans-serif}
+a{text-decoration:none;color:inherit}
+header{
+  height:78px;background:#070707;border-bottom:1px solid var(--line);
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0 24px;position:sticky;top:0;z-index:999;
+}
+.logo{font-size:30px;font-weight:900;letter-spacing:7px;text-transform:uppercase}
+.logo span{color:var(--red)}
+.icon{font-size:28px}
+.hero-page{
+  padding:95px 38px 65px;
+  background:
+    radial-gradient(circle at 22% 12%, rgba(200,16,46,.30), transparent 34%),
+    radial-gradient(circle at 88% 0%, rgba(243,169,189,.13), transparent 32%),
+    linear-gradient(180deg,#090909,#050505);
+}
+.label{color:var(--gold);letter-spacing:10px;text-transform:uppercase;font-size:14px;margin-bottom:38px}
+.label:before{content:"";display:inline-block;width:58px;height:1px;background:var(--gold);margin-right:14px;vertical-align:middle}
+h1,h2,h3{font-family:Impact,Arial Black,sans-serif;text-transform:uppercase;line-height:.95;font-weight:400}
+h1{font-size:64px}
+h2{font-size:48px}
+.red{color:var(--red)}
+.script{font-family:Georgia,serif;font-style:italic;color:var(--pink);text-transform:none}
+p{color:var(--muted);font-size:22px;line-height:1.55;margin-top:28px}
+.btn{
+  display:block;width:100%;text-align:center;padding:25px 16px;margin-top:24px;
+  background:linear-gradient(90deg,var(--red),var(--red2));
+  color:white;text-transform:uppercase;letter-spacing:7px;font-weight:900;border:0;cursor:pointer;
+}
+.btn.outline{background:transparent;border:1px solid rgba(255,255,255,.35)}
+.btn.gold{background:transparent;border:1px solid #8d6936;color:var(--gold)}
+.section{padding:60px 38px;background:#070707}
+.section.dark{background:#050505}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px}
+.card{
+  background:radial-gradient(circle at top right, rgba(200,16,46,.13), transparent 35%), #0a0a0a;
+  border:1px solid #25171a;padding:26px;position:relative;overflow:hidden;
+}
+.card h2{font-size:34px}
+.card h3{font-size:30px;margin-bottom:10px}
+.price{color:#d2a158;font-size:30px;font-weight:900;margin-top:18px}
+.small{font-size:15px;color:#999;line-height:1.5}
+.checks{display:grid;gap:20px;margin-top:28px}
+.check{font-size:20px;color:#eee;line-height:1.4}
+.check span{background:#25060d;color:var(--red);border-radius:50%;padding:8px 12px;margin-right:12px;font-weight:900}
+.product-pick{
+  display:grid;grid-template-columns:86px 1fr auto;gap:15px;align-items:center;
+  border:1px solid #222;background:#090909;padding:14px;margin-top:14px;
+}
+.product-pick img{width:86px;height:86px;object-fit:cover;background:#111}
+.product-pick strong{font-size:18px;text-transform:uppercase}
+.product-pick input{width:24px;height:24px;accent-color:#c8102e}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field, textarea, select{
+  width:100%;padding:20px;background:#080808;border:1px solid #2b2b2b;
+  color:white;font-size:18px;margin-top:14px;
+}
+textarea{min-height:130px;resize:vertical;font-family:Arial,sans-serif}
+.panel{
+  background:radial-gradient(circle at top right, rgba(200,16,46,.10), transparent 35%), #0a0a0a;
+  border:1px solid #23161a;padding:26px;margin-top:24px;
+}
+.panel h2{font-size:34px}
+.bundle-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+.summary-row{display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid #222;padding:15px 0;color:#ccc}
+.summary-row strong{color:#d2a158}
+.badge{
+  display:inline-block;border:1px solid #8d6936;color:var(--gold);
+  padding:10px 15px;letter-spacing:3px;text-transform:uppercase;font-size:12px;margin-bottom:18px;
+}
+footer{padding:42px 25px;text-align:center;border-top:1px solid #222;color:#777;letter-spacing:6px;font-size:13px;background:#050505}
+@media(max-width:800px){
+  header{padding:0 20px}.logo{font-size:27px;letter-spacing:5px}
+  .hero-page,.section{padding-left:30px;padding-right:30px}
+  h1{font-size:56px}h2{font-size:42px}p{font-size:21px}
+  .grid,.cards3,.bundle-layout,.form-grid{grid-template-columns:1fr}
+  .product-pick{grid-template-columns:70px 1fr auto}
+  .product-pick img{width:70px;height:70px}
+}
+</style>
+
+</head>
+<body>
+
+<header>
+  <a class="icon" href="index.html">☰</a>
+  <a href="index.html" class="logo">HUSTLE <span>&</span> HER</a>
+  <div class="icon">⌕ 🛍</div>
+</header>
+
+
+<section class="hero-page">
+  <div class="label">Build My Bundle</div>
+  <h1>Pick Your Products.<br><span class="script">Build Your Bag.</span></h1>
+  <p>For the girl who already knows what she wants. Choose your products, build your starter bundle, and get ready to launch your side-hustle setup your way.</p>
+  <a href="#bundle-builder" class="btn">Start Building</a>
+  <a href="products.html" class="btn outline">Browse All Products</a>
+</section>
+
+<section class="section dark" id="bundle-builder">
+  <div class="bundle-layout">
+    <main>
+      <div class="label">Step 01 — Choose Items</div>
+      <h2>Your Bundle <span class="script">Builder</span></h2>
+      <p>Select the items you want included. This is front-end ready, so later you can connect it to PayPal, a cart script, or a backend.</p>
+
+      <div class="product-pick">
+        <img src="self-defense.jpg" alt="">
+        <div><strong>Rose Gold Defense Keychain</strong><p class="small">$38 · Self-defense starter piece</p></div>
+        <input type="checkbox">
+      </div>
+
+      <div class="product-pick">
+        <img src="rolling-tray.jpg" alt="">
+        <div><strong>Velvet Rose Rolling Tray</strong><p class="small">$64 · Custom lifestyle piece</p></div>
+        <input type="checkbox">
+      </div>
+
+      <div class="product-pick">
+        <img src="hoodie.jpg" alt="">
+        <div><strong>"Handle It" Hoodie</strong><p class="small">$78 · Brandable apparel item</p></div>
+        <input type="checkbox">
+      </div>
+
+      <div class="product-pick">
+        <img src="accessories.jpg" alt="">
+        <div><strong>Boss Hoop & Chain Set</strong><p class="small">$52 · Add-on accessory</p></div>
+        <input type="checkbox">
+      </div>
+
+      <div class="product-pick">
+        <img src="bundle.jpg" alt="">
+        <div><strong>Starter Hustle Bundle</strong><p class="small">$149 · Best for new sellers</p></div>
+        <input type="checkbox">
+      </div>
+    </main>
+
+    <aside class="panel">
+      <span class="badge">Bundle Summary</span>
+      <h2>Build It<br><span class="script">Your Way</span></h2>
+      <div class="summary-row"><span>Selected items</span><strong>0</strong></div>
+      <div class="summary-row"><span>Estimated total</span><strong>$0+</strong></div>
+      <div class="summary-row"><span>Bundle discount</span><strong>Applied later</strong></div>
+      <p class="small">This summary is a placeholder. Later, JavaScript can calculate the price automatically when customers select items.</p>
+      <a href="checkout.html" class="btn">Continue To Checkout</a>
+      <a href="start-my-setup.html" class="btn outline">Need Help Choosing?</a>
+    </aside>
+  </div>
+</section>
+
+<section class="section">
+  <div class="label">Bundle Ideas</div>
+  <h2>Not Sure What To Pick?</h2>
+  <div class="cards3">
+    <div class="card"><h2>Rookie</h2><p>Best for starting small with a few beginner-friendly products.</p><div class="price">$99+</div></div>
+    <div class="card"><h2>Pro</h2><p>Best for a more serious launch with stronger product variety.</p><div class="price">$249+</div></div>
+    <div class="card"><h2>Legendary</h2><p>Best for someone who wants the full setup and bigger inventory.</p><div class="price">$499+</div></div>
+  </div>
+</section>
+
+<footer>HUSTLE & HER · STAY READY · STAY PAID</footer>
+</body>
+</html>
