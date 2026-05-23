@@ -43,7 +43,7 @@ header{
   text-transform:uppercase;
 }
 .logo span{color:var(--red)}
-.icon{font-size:28px}
+.icon{font-size:28px;cursor:pointer}
 .hero-page{
   padding:95px 38px 65px;
   background:
@@ -100,6 +100,7 @@ p{
   letter-spacing:7px;
   font-weight:900;
   border:0;
+  cursor:pointer;
 }
 .btn.outline{
   background:transparent;
@@ -270,13 +271,20 @@ footer{
 }
 </style>
 
+<!-- ========== SNIPCART SCRIPTS ========== -->
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.5.2/default/snipcart.css" />
+<script src="https://cdn.snipcart.com/themes/v3.5.2/default/snipcart.js"></script>
+<script src="https://cdn.snipcart.com/scripts/3.5.2/snipcart.js" data-api-key="NWMyMmU1ZDgtNjI5Ni00MDdiLWE5YWEtZTczNWJlZDc0ZjViNjM5MTUwNTczMTE3MTk2MDYz" id="snipcart"></script>
+<!-- ========== END SNIPCART ========== -->
+
 </head>
 <body>
 
 <header>
   <a class="icon" href="index.html">☰</a>
   <a href="index.html" class="logo">HUSTLE <span>&</span> HER</a>
-  <div class="icon">⌕ 🛍</div>
+  <!-- Snipcart cart icon with total -->
+  <div class="icon"><span class="snipcart-cart-total-price" style="font-size:14px; margin-right:5px;">$0.00</span> 🛍</div>
 </header>
 
 
@@ -289,16 +297,71 @@ footer{
 <section class="section dark">
   <div class="panel">
     <h2>Sign Up</h2>
-    <input class="field" placeholder="First name">
-    <input class="field" placeholder="Last name">
-    <input class="field" placeholder="Email address">
-    <input class="field" placeholder="Password">
-    <button class="btn" type="button">Create Account</button>
+    <input class="field" id="signup-first" placeholder="First name">
+    <input class="field" id="signup-last" placeholder="Last name">
+    <input class="field" id="signup-email" placeholder="Email address">
+    <input class="field" id="signup-password" type="password" placeholder="Password">
+    <button class="btn" type="button" onclick="handleSignup()">Create Account</button>
     <a href="checkout.html" class="btn outline">Continue As Guest</a>
-    <p class="notice">This is front-end only. A real login system needs backend/database setup later.</p>
+    <p class="notice" id="signup-message"></p>
+    <p class="notice" style="margin-top:15px;">✅ Snipcart handles checkout securely. Account data is stored in your browser for demo purposes.</p>
   </div>
 </section>
 
 <footer>HUSTLE & HER · STAY READY · STAY PAID</footer>
+
+<!-- ========== SNIPCART CART CONTAINER (REQUIRED) ========== -->
+<div hidden id="snipcart" data-config-modal-style="side"></div>
+<!-- ========== END SNIPCART CONTAINER ========== -->
+
+<script>
+  function handleSignup() {
+    const firstName = document.getElementById('signup-first').value;
+    const lastName = document.getElementById('signup-last').value;
+    const email = document.getElementById('signup-email').value;
+    const password = document.getElementById('signup-password').value;
+    const messageEl = document.getElementById('signup-message');
+    
+    if (!firstName || !lastName || !email || !password) {
+      messageEl.innerHTML = '❌ Please fill out all fields.';
+      messageEl.style.color = '#c8102e';
+      return;
+    }
+    
+    // Save user info to localStorage (demo only - real backend would be better)
+    const user = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      createdAt: new Date().toISOString()
+    };
+    
+    localStorage.setItem('hustle_user', JSON.stringify(user));
+    messageEl.innerHTML = '✅ Account created! You can now continue shopping.';
+    messageEl.style.color = '#c7a061';
+    
+    // Clear password field for security
+    document.getElementById('signup-password').value = '';
+    
+    // Optional: redirect after 2 seconds
+    setTimeout(() => {
+      window.location.href = 'products.html';
+    }, 2000);
+  }
+  
+  // Check if user is already logged in
+  window.addEventListener('load', function() {
+    const savedUser = localStorage.getItem('hustle_user');
+    if (savedUser) {
+      const user = JSON.parse(savedUser);
+      const messageEl = document.getElementById('signup-message');
+      if (messageEl) {
+        messageEl.innerHTML = `✅ Welcome back, ${user.firstName}! You're already signed up.`;
+        messageEl.style.color = '#c7a061';
+      }
+    }
+  });
+</script>
+
 </body>
 </html>
