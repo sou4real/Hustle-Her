@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rose Gold Defense Keychain | Hustle & Her</title>
+<title>Products | Hustle & Her</title>
 
 <!-- ========== SNIPCART SCRIPTS ========== -->
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.5.2/default/snipcart.css" />
 <script src="https://cdn.snipcart.com/themes/v3.5.2/default/snipcart.js"></script>
-<script src="https://cdn.snipcart.com/scripts/3.5.2/snipcart.js" data-api-key="MTU2NWI5MWMtZjdiNS00N2EzLTgyZjYtYzY0NTllZjc4ZTc1NjM5MTUwNTczMTE3MTk2MDYz" id="snipcart"></script>
+<script src="https://cdn.snipcart.com/scripts/3.5.2/snipcart.js" data-api-key="NWMyMmU1ZDgtNjI5Ni00MDdiLWE5YWEtZTczNWJlZDc0ZjViNjM5MTUwNTczMTE3MTk2MDYz" id="snipcart"></script>
 <!-- ========== END SNIPCART ========== -->
 
 <style>
@@ -129,6 +129,7 @@ p{
 }
 .product{
   background:#070707;
+  padding:0;
 }
 .product img{
   width:100%;
@@ -145,11 +146,10 @@ p{
   font-weight:900;
 }
 .price{
-  float:right;
   color:#d2a158;
   font-weight:900;
   font-size:26px;
-  margin-left:8px;
+  margin:10px 0;
 }
 .stars{
   margin-top:15px;
@@ -171,6 +171,10 @@ p{
   letter-spacing:3px;
   text-transform:uppercase;
   font-size:13px;
+  cursor:pointer;
+}
+.pill:hover{
+  border-color:var(--gold);
 }
 .detail{
   display:grid;
@@ -205,54 +209,6 @@ p{
   line-height:1.8;
   margin-top:16px;
 }
-.field{
-  width:100%;
-  padding:20px;
-  background:#080808;
-  border:1px solid #2b2b2b;
-  color:white;
-  font-size:18px;
-  margin-top:14px;
-}
-.row{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-}
-.checkout-wrap{
-  display:grid;
-  grid-template-columns:1.25fr .85fr;
-  gap:28px;
-}
-.summary-row{
-  display:flex;
-  justify-content:space-between;
-  gap:14px;
-  border-bottom:1px solid #222;
-  padding:15px 0;
-  color:#ccc;
-}
-.summary-row strong{color:#d2a158}
-.notice{
-  font-size:15px;
-  color:#999;
-  line-height:1.5;
-  margin-top:18px;
-}
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-  margin-top:38px;
-}
-.card{
-  background:
-    radial-gradient(circle at top right, rgba(200,16,46,.14), transparent 34%),
-    #0a0a0a;
-  border:1px solid #25171a;
-  padding:26px;
-}
-.card h2{font-size:34px}
 footer{
   padding:42px 25px;
   text-align:center;
@@ -271,9 +227,8 @@ footer{
   p{font-size:21px}
   .grid{gap:18px}
   .product img{height:245px}
-  .detail,.checkout-wrap,.cards{grid-template-columns:1fr}
+  .detail{grid-template-columns:1fr}
   .detail img{height:430px}
-  .row{grid-template-columns:1fr}
 }
 </style>
 
@@ -288,46 +243,116 @@ footer{
 </header>
 
 
+<section class="hero-page">
+  <div class="label">Shop The Drop</div>
+  <h1>Build Your<br><span class="red">Kit.</span></h1>
+  <p>Browse self-defense pieces, lifestyle accessories, clothing, custom trays, and starter-ready essentials.</p>
+  <div class="filter-row">
+    <span class="pill">All</span>
+    <span class="pill">Self Defense</span>
+    <span class="pill">Accessories</span>
+    <span class="pill">Clothing</span>
+    <span class="pill">Trays</span>
+    <span class="pill">Bundles</span>
+  </div>
+</section>
+
 <section class="section dark">
-  <div class="detail">
-    <img src="self-defense.jpg" alt="Rose Gold Defense Keychain">
-    <div>
-      <div class="label">Best Seller</div>
-      <h1>Rose Gold<br><span class="script">Defense Keychain</span></h1>
-      <div class="stars">★★★★★ 124 reviews</div>
-      <div class="big-price">$38</div>
-      <p>A sleek everyday self-defense piece made for women who want practical safety without killing the aesthetic.</p>
-      
-      <!-- SNIPCART ADD TO CART BUTTON - CORRECTED -->
+  <div class="grid">
+    <!-- PRODUCT 1 - Rose Gold Defense Keychain -->
+    <div class="product">
+      <img src="self-defense.jpg" alt="Rose Gold Defense Keychain">
+      <div class="product-title">Rose Gold Defense Keychain</div>
+      <div class="stars">★★★★★ (124)</div>
+      <div class="price">$38.00</div>
       <button class="btn snipcart-add-item"
         data-item-id="keychain-001"
         data-item-price="38.00"
         data-item-name="Rose Gold Defense Keychain"
-        data-item-description="Sleek everyday self-defense piece with rose gold finish."
-        data-item-url="/product.html">
+        data-item-description="Stylish self-defense keychain for safety on the go."
+        data-item-url="/products.html">
         Add to Cart
       </button>
-      
-      <a href="checkout.html" class="btn outline">Buy Now</a>
+    </div>
 
-      <div class="panel">
-        <h2>Details</h2>
-        <ul>
-          <li>Rose gold finish</li>
-          <li>Compact everyday carry design</li>
-          <li>Discreet and lightweight</li>
-          <li>Pairs well with starter kits and bundles</li>
-        </ul>
-      </div>
+    <!-- PRODUCT 2 - Velvet Rose Rolling Tray -->
+    <div class="product">
+      <img src="rolling-tray.jpg" alt="Velvet Rose Rolling Tray">
+      <div class="product-title">Velvet Rose Rolling Tray</div>
+      <div class="stars">★★★★★ (124)</div>
+      <div class="price">$64.00</div>
+      <button class="btn snipcart-add-item"
+        data-item-id="tray-002"
+        data-item-price="64.00"
+        data-item-name="Velvet Rose Rolling Tray"
+        data-item-description="Luxury velvet rolling tray with rose design."
+        data-item-url="/products.html">
+        Add to Cart
+      </button>
+    </div>
 
-      <div class="panel">
-        <h2>Shipping</h2>
-        <ul>
-          <li>Ships within 48 hours</li>
-          <li>Plain discreet packaging</li>
-          <li>Returns accepted on unopened items</li>
-        </ul>
-      </div>
+    <!-- PRODUCT 3 - "Handle It" Hoodie -->
+    <div class="product">
+      <img src="hoodie.jpg" alt="Handle It Hoodie">
+      <div class="product-title">"Handle It" Hoodie</div>
+      <div class="stars">★★★★★ (124)</div>
+      <div class="price">$78.00</div>
+      <button class="btn snipcart-add-item"
+        data-item-id="hoodie-003"
+        data-item-price="78.00"
+        data-item-name="Handle It Hoodie"
+        data-item-description="Bold statement hoodie for the confident woman."
+        data-item-url="/products.html">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- PRODUCT 4 - Boss Hoop & Chain Set -->
+    <div class="product">
+      <img src="accessories.jpg" alt="Boss Hoop & Chain Set">
+      <div class="product-title">Boss Hoop & Chain Set</div>
+      <div class="stars">★★★★★ (124)</div>
+      <div class="price">$52.00</div>
+      <button class="btn snipcart-add-item"
+        data-item-id="jewelry-004"
+        data-item-price="52.00"
+        data-item-name="Boss Hoop & Chain Set"
+        data-item-description="Gold hoop earrings with matching chain necklace."
+        data-item-url="/products.html">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- PRODUCT 5 - Starter Hustle Bundle -->
+    <div class="product">
+      <img src="bundle.jpg" alt="Starter Hustle Bundle">
+      <div class="product-title">Starter Hustle Bundle</div>
+      <div class="stars">★★★★★ (88)</div>
+      <div class="price">$149.00</div>
+      <button class="btn snipcart-add-item"
+        data-item-id="bundle-005"
+        data-item-price="149.00"
+        data-item-name="Starter Hustle Bundle"
+        data-item-description="Complete starter kit: keychain + tray + hoodie."
+        data-item-url="/products.html">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- PRODUCT 6 - Boss Gloss Set -->
+    <div class="product">
+      <img src="lipgloss.jpg" alt="Boss Gloss Set">
+      <div class="product-title">Boss Gloss Set</div>
+      <div class="stars">★★★★★ (67)</div>
+      <div class="price">$24.00</div>
+      <button class="btn snipcart-add-item"
+        data-item-id="gloss-006"
+        data-item-price="24.00"
+        data-item-name="Boss Gloss Set"
+        data-item-description="Set of 3 premium lip glosses."
+        data-item-url="/products.html">
+        Add to Cart
+      </button>
     </div>
   </div>
 </section>
