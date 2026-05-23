@@ -100,6 +100,7 @@ p{
   letter-spacing:7px;
   font-weight:900;
   border:0;
+  cursor:pointer;
 }
 .btn.outline{
   background:transparent;
@@ -270,13 +271,20 @@ footer{
 }
 </style>
 
+<!-- ========== SNIPCART SCRIPTS - ADDED CORRECTLY ========== -->
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.5.2/default/snipcart.css" />
+<script src="https://cdn.snipcart.com/themes/v3.5.2/default/snipcart.js"></script>
+<script src="https://cdn.snipcart.com/scripts/3.5.2/snipcart.js" data-api-key="NWMyMmU1ZDgtNjI5Ni00MDdiLWE5YWEtZTczNWJlZDc0ZjViNjM5MTUwNTczMTE3MTk2MDYz" id="snipcart"></script>
+<!-- ========== END SNIPCART ========== -->
+
 </head>
 <body>
 
 <header>
   <a class="icon" href="index.html">☰</a>
   <a href="index.html" class="logo">HUSTLE <span>&</span> HER</a>
-  <div class="icon">⌕ 🛍</div>
+  <!-- Snipcart cart icon will appear after the script loads -->
+  <div class="icon"><span class="snipcart-cart-total-price" style="font-size:14px; margin-right:8px;">$0.00</span>🛍</div>
 </header>
 
 
@@ -296,39 +304,103 @@ footer{
 
 <section class="section dark">
   <div class="grid">
-    <a class="product" href="product.html">
-      <img src="self-defense.jpg">
-      <div class="product-title">Rose Gold Defense Keychain <span class="price">$38</span></div>
+    <!-- PRODUCT 1 - Rose Gold Defense Keychain -->
+    <div class="product">
+      <img src="self-defense.jpg" alt="Rose Gold Defense Keychain">
+      <div class="product-title">Rose Gold Defense Keychain</div>
       <div class="stars">★★★★★ (124)</div>
-    </a>
-    <a class="product" href="product.html">
-      <img src="rolling-tray.jpg">
-      <div class="product-title">Velvet Rose Rolling Tray <span class="price">$64</span></div>
+      <button class="btn snipcart-add-item"
+        data-item-id="keychain-001"
+        data-item-price="38.00"
+        data-item-name="Rose Gold Defense Keychain"
+        data-item-description="Stylish self-defense keychain for safety on the go."
+        data-item-url="/products.html">
+        Add to Cart - $38
+      </button>
+    </div>
+
+    <!-- PRODUCT 2 - Velvet Rose Rolling Tray -->
+    <div class="product">
+      <img src="rolling-tray.jpg" alt="Velvet Rose Rolling Tray">
+      <div class="product-title">Velvet Rose Rolling Tray</div>
       <div class="stars">★★★★★ (124)</div>
-    </a>
-    <a class="product" href="product.html">
-      <img src="hoodie.jpg">
-      <div class="product-title">"Handle It" Hoodie <span class="price">$78</span></div>
+      <button class="btn snipcart-add-item"
+        data-item-id="tray-002"
+        data-item-price="64.00"
+        data-item-name="Velvet Rose Rolling Tray"
+        data-item-description="Luxury velvet rolling tray with rose design."
+        data-item-url="/products.html">
+        Add to Cart - $64
+      </button>
+    </div>
+
+    <!-- PRODUCT 3 - "Handle It" Hoodie -->
+    <div class="product">
+      <img src="hoodie.jpg" alt="Handle It Hoodie">
+      <div class="product-title">"Handle It" Hoodie</div>
       <div class="stars">★★★★★ (124)</div>
-    </a>
-    <a class="product" href="product.html">
-      <img src="accessories.jpg">
-      <div class="product-title">Boss Hoop & Chain Set <span class="price">$52</span></div>
+      <button class="btn snipcart-add-item"
+        data-item-id="hoodie-003"
+        data-item-price="78.00"
+        data-item-name="Handle It Hoodie"
+        data-item-description="Bold statement hoodie for the confident woman."
+        data-item-url="/products.html">
+        Add to Cart - $78
+      </button>
+    </div>
+
+    <!-- PRODUCT 4 - Boss Hoop & Chain Set -->
+    <div class="product">
+      <img src="accessories.jpg" alt="Boss Hoop & Chain Set">
+      <div class="product-title">Boss Hoop & Chain Set</div>
       <div class="stars">★★★★★ (124)</div>
-    </a>
-    <a class="product" href="product.html">
-      <img src="bundle.jpg">
-      <div class="product-title">Starter Hustle Bundle <span class="price">$149</span></div>
+      <button class="btn snipcart-add-item"
+        data-item-id="jewelry-004"
+        data-item-price="52.00"
+        data-item-name="Boss Hoop & Chain Set"
+        data-item-description="Gold hoop earrings with matching chain necklace."
+        data-item-url="/products.html">
+        Add to Cart - $52
+      </button>
+    </div>
+
+    <!-- PRODUCT 5 - Starter Hustle Bundle -->
+    <div class="product">
+      <img src="bundle.jpg" alt="Starter Hustle Bundle">
+      <div class="product-title">Starter Hustle Bundle</div>
       <div class="stars">★★★★★ (88)</div>
-    </a>
-    <a class="product" href="product.html">
-      <img src="lipgloss.jpg">
-      <div class="product-title">Boss Gloss Set <span class="price">$24</span></div>
+      <button class="btn snipcart-add-item"
+        data-item-id="bundle-005"
+        data-item-price="149.00"
+        data-item-name="Starter Hustle Bundle"
+        data-item-description="Complete starter kit: keychain + tray + hoodie."
+        data-item-url="/products.html">
+        Add to Cart - $149
+      </button>
+    </div>
+
+    <!-- PRODUCT 6 - Boss Gloss Set -->
+    <div class="product">
+      <img src="lipgloss.jpg" alt="Boss Gloss Set">
+      <div class="product-title">Boss Gloss Set</div>
       <div class="stars">★★★★★ (67)</div>
-    </a>
+      <button class="btn snipcart-add-item"
+        data-item-id="gloss-006"
+        data-item-price="24.00"
+        data-item-name="Boss Gloss Set"
+        data-item-description="Set of 3 premium lip glosses."
+        data-item-url="/products.html">
+        Add to Cart - $24
+      </button>
+    </div>
   </div>
 </section>
 
 <footer>HUSTLE & HER · STAY READY · STAY PAID</footer>
+
+<!-- ========== SNIPCART CART CONTAINER (REQUIRED) ========== -->
+<div hidden id="snipcart" data-config-modal-style="side"></div>
+<!-- ========== END SNIPCART CONTAINER ========== -->
+
 </body>
 </html>
