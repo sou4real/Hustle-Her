@@ -43,7 +43,7 @@ header{
   text-transform:uppercase;
 }
 .logo span{color:var(--red)}
-.icon{font-size:28px}
+.icon{font-size:28px;cursor:pointer}
 .hero-page{
   padding:95px 38px 65px;
   background:
@@ -100,6 +100,7 @@ p{
   letter-spacing:7px;
   font-weight:900;
   border:0;
+  cursor:pointer;
 }
 .btn.outline{
   background:transparent;
@@ -270,61 +271,83 @@ footer{
 }
 </style>
 
+<!-- ========== SNIPCART SCRIPTS ========== -->
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.5.2/default/snipcart.css" />
+<script src="https://cdn.snipcart.com/themes/v3.5.2/default/snipcart.js"></script>
+<script src="https://cdn.snipcart.com/scripts/3.5.2/snipcart.js" data-api-key="NWMyMmU1ZDgtNjI5Ni00MDdiLWE5YWEtZTczNWJlZDc0ZjViNjM5MTUwNTczMTE3MTk2MDYz" id="snipcart"></script>
+<!-- ========== END SNIPCART ========== -->
+
 </head>
 <body>
 
 <header>
   <a class="icon" href="index.html">☰</a>
   <a href="index.html" class="logo">HUSTLE <span>&</span> HER</a>
-  <div class="icon">⌕ 🛍</div>
+  <!-- Snipcart cart icon with total -->
+  <div class="icon"><span class="snipcart-cart-total-price" style="font-size:14px; margin-right:5px;">$0.00</span> 🛍</div>
 </header>
 
 
 <section class="hero-page">
   <div class="label">Secure Checkout</div>
   <h1>Finish Your<br><span class="script">Order.</span></h1>
-  <p>This page is ready for your checkout flow. Replace the payment section with your PayPal button when you are ready.</p>
+  <p>Review your items below and complete your purchase securely.</p>
 </section>
 
 <section class="section dark checkout-wrap">
   <main>
     <div class="panel">
       <h2>Contact</h2>
-      <input class="field" placeholder="Email address">
-      <input class="field" placeholder="Phone number">
+      <input class="field" id="customer-email" placeholder="Email address">
+      <input class="field" id="customer-phone" placeholder="Phone number">
     </div>
 
     <div class="panel">
       <h2>Shipping</h2>
-      <input class="field" placeholder="Full name">
-      <input class="field" placeholder="Street address">
-      <input class="field" placeholder="Apartment, suite, etc.">
+      <input class="field" id="customer-name" placeholder="Full name">
+      <input class="field" id="customer-address" placeholder="Street address">
+      <input class="field" id="customer-apt" placeholder="Apartment, suite, etc.">
       <div class="row">
-        <input class="field" placeholder="City">
-        <input class="field" placeholder="State">
+        <input class="field" id="customer-city" placeholder="City">
+        <input class="field" id="customer-state" placeholder="State">
       </div>
-      <input class="field" placeholder="ZIP code">
+      <input class="field" id="customer-zip" placeholder="ZIP code">
     </div>
 
     <div class="panel">
       <h2>Payment</h2>
-      <p class="notice">PayPal Checkout button goes here.</p>
-      <input class="field" placeholder="PayPal / card checkout placeholder">
-      <button class="btn" type="button">Place Order</button>
+      <p class="notice">Click the cart icon to review items, then click "Checkout" to pay securely with credit card, PayPal, or Apple Pay.</p>
+      <!-- Snipcart checkout button will appear in the cart sidebar -->
+      <p class="notice" style="margin-top:20px; text-align:center;">✅ All payments processed securely by Snipcart</p>
     </div>
   </main>
 
   <aside class="panel">
     <h2>Order Summary</h2>
-    <div class="summary-row"><span>Rose Gold Defense Keychain</span><strong>$38</strong></div>
-    <div class="summary-row"><span>Shipping</span><strong>$5</strong></div>
-    <div class="summary-row"><span>Tax</span><strong>Calculated</strong></div>
-    <div class="summary-row"><span>Total</span><strong>$43+</strong></div>
-    <a href="products.html" class="btn outline">Keep Shopping</a>
-    <p class="notice">Secure checkout · discreet shipping · no data sold</p>
+    <!-- Snipcart will automatically populate this summary -->
+    <div id="snipcart-summary">
+      <div class="summary-row"><span>Items in cart</span><strong><span class="snipcart-total-items">0</span></strong></div>
+      <div class="summary-row"><span>Subtotal</span><strong>$<span class="snipcart-total-price">0.00</span></strong></div>
+      <div class="summary-row"><span>Shipping</span><strong>Calculated at checkout</strong></div>
+      <div class="summary-row"><span>Total</span><strong>$<span class="snipcart-total-price">0.00</span></strong></div>
+    </div>
+    <a href="products.html" class="btn outline">Continue Shopping</a>
+    <p class="notice">🔒 Secure checkout · discreet shipping · no data sold</p>
   </aside>
 </section>
 
 <footer>HUSTLE & HER · STAY READY · STAY PAID</footer>
+
+<!-- ========== SNIPCART CART CONTAINER (REQUIRED) ========== -->
+<div hidden id="snipcart" data-config-modal-style="side"></div>
+<!-- ========== END SNIPCART CONTAINER ========== -->
+
+<script>
+  // Optional: Update order summary when Snipcart updates
+  document.addEventListener('snipcart.ready', function() {
+    console.log('Snipcart is ready!');
+  });
+</script>
+
 </body>
 </html>
