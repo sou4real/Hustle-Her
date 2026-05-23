@@ -9,13 +9,13 @@
 body{background:#050505;color:white;font-family:Arial,sans-serif}
 a{text-decoration:none;color:inherit}
 header{height:78px;background:#070707;border-bottom:1px solid #222;display:flex;justify-content:space-between;align-items:center;padding:0 24px;position:sticky;top:0;z-index:10}
-.logo{font-size:30px;font-weight:900;letter-spacing:7px}.logo span{color:#c8102e}.icon{font-size:28px}
+.logo{font-size:30px;font-weight:900;letter-spacing:7px}.logo span{color:#c8102e}.icon{font-size:28px;cursor:pointer}
 .hero{min-height:720px;padding:130px 45px 55px;background:linear-gradient(90deg,rgba(0,0,0,.25),#070707 72%),url('hero.jpg') left center/cover no-repeat}
 .label{color:#c7a061;letter-spacing:10px;text-transform:uppercase;font-size:15px;margin-bottom:45px}.label:before{content:"";display:inline-block;width:60px;height:1px;background:#c7a061;margin-right:15px;vertical-align:middle}
 h1,h2{font-family:Impact,Arial Black,sans-serif;text-transform:uppercase;line-height:.95;font-weight:400}
 h1{font-size:72px}h2{font-size:58px}.red{color:#c8102e}.script{font-family:Georgia,serif;font-style:italic;color:#f3a9bd;text-transform:none}
 .hero p,.section p{color:#b8b8b8;font-size:27px;line-height:1.6;margin-top:42px}.hero em{color:#f3a9bd;font-family:Georgia,serif}
-.btn{display:block;width:100%;text-align:center;padding:28px 18px;margin-top:28px;background:linear-gradient(90deg,#cf102e,#99001d);color:white;text-transform:uppercase;letter-spacing:8px;font-weight:900}
+.btn{display:block;width:100%;text-align:center;padding:28px 18px;margin-top:28px;background:linear-gradient(90deg,#cf102e,#99001d);color:white;text-transform:uppercase;letter-spacing:8px;font-weight:900;border:none;cursor:pointer}
 .btn.outline{background:transparent;border:1px solid rgba(255,255,255,.35)}.btn.gold{background:transparent;border:1px solid #8d6936;color:#c7a061}
 .rating{margin-top:72px;color:#aaa;letter-spacing:8px}.scroll{text-align:center;color:#777;letter-spacing:12px;margin-top:78px}
 .marquee{background:#101010;border-top:1px solid #222;border-bottom:1px solid #222;padding:38px 0;white-space:nowrap;overflow:hidden;font-size:36px;font-weight:900;letter-spacing:10px;color:#d5d5d5}.marquee span{color:#c8102e;padding:0 25px}
@@ -28,17 +28,25 @@ h1{font-size:72px}h2{font-size:58px}.red{color:#c8102e}.script{font-family:Georg
 .card h3{font-size:38px;line-height:.95;text-transform:uppercase}.pieces{margin-top:12px;color:#ccc;letter-spacing:6px;font-size:19px;text-transform:uppercase}
 .product img{width:100%;height:292px;object-fit:cover;background:#111;margin-bottom:24px}.product-title{font-size:27px;line-height:1.15;text-transform:uppercase;font-weight:900}.price{float:right;color:#d2a158;font-weight:900;font-size:28px}.stars{margin-top:17px;color:#aaa;letter-spacing:4px}
 .checks{display:grid;gap:27px;margin-top:50px}.check{font-size:24px}.check span{background:#25060d;color:#c8102e;border-radius:50%;padding:10px 14px;margin-right:17px;font-weight:900}
-.features{display:grid;grid-template-columns:1fr 1fr;gap:50px;border-top:1px solid #222}.feature{display:grid;grid-template-columns:78px 1fr;gap:20px}.circle{width:72px;height:72px;border:1px solid #252525;border-radius:50%;display:grid;place-items:center;font-size:31px;background:#080808}.feature h3{font-size:34px;line-height:1.05;text-transform:uppercase}.feature p{margin-top:14px;font-size:22px;line-height:1.28;color:#aaa}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:50px;border-top:1px solid #222;margin-top:50px;padding-top:50px}.feature{display:grid;grid-template-columns:78px 1fr;gap:20px}.circle{width:72px;height:72px;border:1px solid #252525;border-radius:50%;display:grid;place-items:center;font-size:31px;background:#080808}.feature h3{font-size:34px;line-height:1.05;text-transform:uppercase}.feature p{margin-top:14px;font-size:22px;line-height:1.28;color:#aaa}
 .email{text-align:center;background:linear-gradient(#080808,#150609)}.email input{width:100%;background:#080808;color:white;border:1px solid #242424;padding:25px;font-size:22px;margin-top:35px}
 footer{padding:45px 28px;text-align:center;border-top:1px solid #222;color:#777;letter-spacing:7px;font-size:14px}
 @media(max-width:520px){header{padding:0 20px}.logo{font-size:27px;letter-spacing:5px}.hero{padding:125px 32px 50px}h1{font-size:61px}h2{font-size:50px}.hero p,.section p{font-size:24px}.section{padding:64px 32px}.grid{gap:22px}.card{height:280px}.product img{height:280px}.features{gap:40px}.feature{grid-template-columns:1fr}}
 </style>
+
+<!-- ========== SNIPCART SCRIPTS ========== -->
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.5.2/default/snipcart.css" />
+<script src="https://cdn.snipcart.com/themes/v3.5.2/default/snipcart.js"></script>
+<script src="https://cdn.snipcart.com/scripts/3.5.2/snipcart.js" data-api-key="NWMyMmU1ZDgtNjI5Ni00MDdiLWE5YWEtZTczNWJlZDc0ZjViNjM5MTUwNTczMTE3MTk2MDYz" id="snipcart"></script>
+<!-- ========== END SNIPCART ========== -->
+
 </head>
 <body>
 <header>
 <div class="icon">☰</div>
 <div class="logo">HUSTLE <span>&</span> HER</div>
-<div class="icon">⌕ 🛍</div>
+<!-- Snipcart cart icon with total -->
+<div class="icon"><span class="snipcart-cart-total-price" style="font-size:14px; margin-right:5px;">$0.00</span> 🛍</div>
 </header>
 
 <section class="hero">
@@ -68,12 +76,67 @@ footer{padding:45px 28px;text-align:center;border-top:1px solid #222;color:#777;
 <section class="section dark" id="products">
 <div class="number">02 — Featured</div>
 <h2>Her <span class="script">Favorites</span></h2>
-<a href="#" class="btn gold">View All Products</a>
+<a href="products.html" class="btn gold">View All Products</a>
 <div class="grid">
-<a class="product" href="#"><img src="self-defense.jpg" alt=""><div class="product-title">Rose Gold Defense Keychain <span class="price">$38</span></div><div class="stars">★★★★★ (124)</div></a>
-<a class="product" href="#"><img src="rolling-tray.jpg" alt=""><div class="product-title">Velvet Rose Rolling Tray <span class="price">$64</span></div><div class="stars">★★★★★ (124)</div></a>
-<a class="product" href="#"><img src="hoodie.jpg" alt=""><div class="product-title">"Handle It" Hoodie <span class="price">$78</span></div><div class="stars">★★★★★ (124)</div></a>
-<a class="product" href="#"><img src="accessories.jpg" alt=""><div class="product-title">Boss Hoop & Chain Set <span class="price">$52</span></div><div class="stars">★★★★★ (124)</div></a>
+<!-- PRODUCT 1 - Rose Gold Defense Keychain (Snipcart button) -->
+<div class="product">
+<img src="self-defense.jpg" alt="Rose Gold Defense Keychain">
+<div class="product-title">Rose Gold Defense Keychain</div>
+<div class="stars">★★★★★ (124)</div>
+<button class="btn snipcart-add-item"
+  data-item-id="keychain-001"
+  data-item-price="38.00"
+  data-item-name="Rose Gold Defense Keychain"
+  data-item-description="Stylish self-defense keychain for safety on the go."
+  data-item-url="/index.html">
+  Add to Cart - $38
+</button>
+</div>
+
+<!-- PRODUCT 2 - Velvet Rose Rolling Tray (Snipcart button) -->
+<div class="product">
+<img src="rolling-tray.jpg" alt="Velvet Rose Rolling Tray">
+<div class="product-title">Velvet Rose Rolling Tray</div>
+<div class="stars">★★★★★ (124)</div>
+<button class="btn snipcart-add-item"
+  data-item-id="tray-002"
+  data-item-price="64.00"
+  data-item-name="Velvet Rose Rolling Tray"
+  data-item-description="Luxury velvet rolling tray with rose design."
+  data-item-url="/index.html">
+  Add to Cart - $64
+</button>
+</div>
+
+<!-- PRODUCT 3 - "Handle It" Hoodie (Snipcart button) -->
+<div class="product">
+<img src="hoodie.jpg" alt="Handle It Hoodie">
+<div class="product-title">"Handle It" Hoodie</div>
+<div class="stars">★★★★★ (124)</div>
+<button class="btn snipcart-add-item"
+  data-item-id="hoodie-003"
+  data-item-price="78.00"
+  data-item-name="Handle It Hoodie"
+  data-item-description="Bold statement hoodie for the confident woman."
+  data-item-url="/index.html">
+  Add to Cart - $78
+</button>
+</div>
+
+<!-- PRODUCT 4 - Boss Hoop & Chain Set (Snipcart button) -->
+<div class="product">
+<img src="accessories.jpg" alt="Boss Hoop & Chain Set">
+<div class="product-title">Boss Hoop & Chain Set</div>
+<div class="stars">★★★★★ (124)</div>
+<button class="btn snipcart-add-item"
+  data-item-id="jewelry-004"
+  data-item-price="52.00"
+  data-item-name="Boss Hoop & Chain Set"
+  data-item-description="Gold hoop earrings with matching chain necklace."
+  data-item-url="/index.html">
+  Add to Cart - $52
+</button>
+</div>
 </div>
 </section>
 
@@ -89,6 +152,7 @@ footer{padding:45px 28px;text-align:center;border-top:1px solid #222;color:#777;
 </div>
 <a href="build-my-bundle.html" class="btn">Build My Kit</a>
 <a href="start-my-setup.html" class="btn outline">Start My Setup</a>
+</section>
 
 <section class="section features">
 <div class="feature"><div class="circle">🔒</div><div><h3>Secure<br>Checkout</h3><p>256-bit SSL · No data sold</p></div></div>
@@ -106,5 +170,10 @@ footer{padding:45px 28px;text-align:center;border-top:1px solid #222;color:#777;
 </section>
 
 <footer>HUSTLE & HER · STAY READY · STAY PAID</footer>
+
+<!-- ========== SNIPCART CART CONTAINER (REQUIRED) ========== -->
+<div hidden id="snipcart" data-config-modal-style="side"></div>
+<!-- ========== END SNIPCART CONTAINER ========== -->
+
 </body>
 </html>
