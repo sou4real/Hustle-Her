@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Program | Hustle & Her</title>
 
+<!-- ========== SNIPCART SCRIPTS ========== -->
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.5.2/default/snipcart.css" />
+<script src="https://cdn.snipcart.com/themes/v3.5.2/default/snipcart.js"></script>
+<script src="https://cdn.snipcart.com/scripts/3.5.2/snipcart.js" data-api-key="NWMyMmU1ZDgtNjI5Ni00MDdiLWE5YWEtZTczNWJlZDc0ZjViNjM5MTUwNTczMTE3MTk2MDYz" id="snipcart"></script>
+<!-- ========== END SNIPCART ========== -->
+
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -43,7 +49,7 @@ header{
   text-transform:uppercase;
 }
 .logo span{color:var(--red)}
-.icon{font-size:28px}
+.icon{font-size:28px;cursor:pointer}
 .hero-page{
   padding:95px 38px 65px;
   background:
@@ -100,6 +106,7 @@ p{
   letter-spacing:7px;
   font-weight:900;
   border:0;
+  cursor:pointer;
 }
 .btn.outline{
   background:transparent;
@@ -246,6 +253,7 @@ p{
   padding:26px;
 }
 .card h2{font-size:34px}
+.card p{margin-top:15px; font-size:18px;}
 footer{
   padding:42px 25px;
   text-align:center;
@@ -276,7 +284,8 @@ footer{
 <header>
   <a class="icon" href="index.html">☰</a>
   <a href="index.html" class="logo">HUSTLE <span>&</span> HER</a>
-  <div class="icon">⌕ 🛍</div>
+  <!-- Snipcart cart icon with total -->
+  <div class="icon"><span class="snipcart-cart-total-price" style="font-size:14px; margin-right:5px;">$0.00</span> 🛍</div>
 </header>
 
 
@@ -289,13 +298,75 @@ footer{
 
 <section class="section dark">
   <h2>What You <span class="script">Get</span></h2>
+  
+  <!-- Program packages with Add to Cart buttons -->
   <div class="cards">
-    <div class="card"><h2>Inventory</h2><p>Curated product bundles to help you start without guessing.</p></div>
-    <div class="card"><h2>Brand Kit</h2><p>Packaging ideas, templates, and startup guidance.</p></div>
-    <div class="card"><h2>Playbook</h2><p>Pricing, margin, listing, and selling support.</p></div>
+    <div class="card">
+      <h2>Inventory</h2>
+      <p>Curated product bundles to help you start without guessing.</p>
+      <div class="price" style="float:none; margin:20px 0 0 0;">$249</div>
+      <button class="btn snipcart-add-item" style="margin-top:20px;"
+        data-item-id="program-inventory-001"
+        data-item-price="249.00"
+        data-item-name="Program - Inventory Bundle"
+        data-item-description="Curated product bundles to help you start without guessing."
+        data-item-url="/program.html">
+        Add to Cart - $249
+      </button>
+    </div>
+
+    <div class="card">
+      <h2>Brand Kit</h2>
+      <p>Packaging ideas, templates, and startup guidance.</p>
+      <div class="price" style="float:none; margin:20px 0 0 0;">$149</div>
+      <button class="btn snipcart-add-item" style="margin-top:20px;"
+        data-item-id="program-brandkit-002"
+        data-item-price="149.00"
+        data-item-name="Program - Brand Kit"
+        data-item-description="Packaging ideas, templates, and startup guidance."
+        data-item-url="/program.html">
+        Add to Cart - $149
+      </button>
+    </div>
+
+    <div class="card">
+      <h2>Playbook</h2>
+      <p>Pricing, margin, listing, and selling support.</p>
+      <div class="price" style="float:none; margin:20px 0 0 0;">$99</div>
+      <button class="btn snipcart-add-item" style="margin-top:20px;"
+        data-item-id="program-playbook-003"
+        data-item-price="99.00"
+        data-item-name="Program - Playbook"
+        data-item-description="Pricing, margin, listing, and selling support."
+        data-item-url="/program.html">
+        Add to Cart - $99
+      </button>
+    </div>
+  </div>
+
+  <!-- Full Program Bundle -->
+  <div style="margin-top:40px;">
+    <div class="card" style="text-align:center; background:linear-gradient(135deg, #0a0a0a, #150609);">
+      <h2>Complete Program Bundle</h2>
+      <p>Inventory + Brand Kit + Playbook — everything you need to launch your side hustle.</p>
+      <div class="price" style="float:none; margin:20px 0 0 0;">$449 (Save $48)</div>
+      <button class="btn snipcart-add-item" style="margin-top:20px;"
+        data-item-id="program-complete-004"
+        data-item-price="449.00"
+        data-item-name="Program - Complete Bundle"
+        data-item-description="Inventory + Brand Kit + Playbook. Everything you need to launch."
+        data-item-url="/program.html">
+        Add to Cart - $449
+      </button>
+    </div>
   </div>
 </section>
 
 <footer>HUSTLE & HER · STAY READY · STAY PAID</footer>
+
+<!-- ========== SNIPCART CART CONTAINER (REQUIRED) ========== -->
+<div hidden id="snipcart" data-config-modal-style="side"></div>
+<!-- ========== END SNIPCART CONTAINER ========== -->
+
 </body>
 </html>
